@@ -8,7 +8,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - run: npm install
     - run: npm run all
 
@@ -16,7 +16,7 @@ jobs:
     runs-on:
       group: local-action-cache
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: 'Run first time without cache'
       id: 'first-run'
       uses: ./
@@ -34,7 +34,7 @@ jobs:
       group: local-action-cache
     needs: [first-run]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: ./
       id: 'second-run'
       with:

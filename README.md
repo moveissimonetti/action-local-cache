@@ -13,7 +13,7 @@ jobs:
   my_job:
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Local cache for API dependencies
         id: api-cache
